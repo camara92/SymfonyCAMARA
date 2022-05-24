@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Une boutique en ligne pour le commerce local ">
+		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+		<meta name="generator" content="Jekyll v4.1.1">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/journal/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+		<title>
+			{% block title %}Portefolio 100% Symfony
+			{% endblock %}
+		</title>
+
+		<!-- Bootstrap core CSS -->
+		{# <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet"> #}
+		<link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
+
+
+		<style>
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			@media(min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+		</style>
+		<!-- Custom styles for this template -->
+		<link href="{{asset('assets/css/carousel.css')}}" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+				<i class="fa-light fa-shop"></i>
+				<a class="navbar-brand" href="{{path('home')}}">
+					<i class="fa fa-home"></i>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="{{path('home')}}">Mes projets</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Nous découvrir
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="{{path('home')}}">Contacts</a>
+						</li>
+
+
+					</ul>
+					<div class="navbar-item-custom">
+						{# <a href="{{path('home')}}">Mon compte<small>({{user}})</small></a> |  #}
+						{# <a href="{{path('home')}}">Déconnexion</a>  #}
+							<a href="{{path('home')}}"> Connexion</a>
+						|
+						<a href="{{path('home')}}">Inscrption</a>
+
+					</div>
+
+
+				</div>
+			</nav>
+		</header>

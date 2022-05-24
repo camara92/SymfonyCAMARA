@@ -1,68 +1,141 @@
 {% extends 'base.html.twig' %}
 {% block carousel %}{% endblock %}
 {% block content %}
- <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+	<!-- Three columns of text below the carousel -->
+	<div class="row">
+		<div class="col-lg-4">
+
+			<img
+			src="data:image/png;base64,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" width="250px" height="150px" alt="symfony">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> #}
+			<h2>Heading</h2>
+			<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+		<!-- /.col-lg-4 -->
+		<div class="col-lg-4">
+
+        <img
+			src="https://static.tutoriel-video.com/wp-content/themes/tutoriel-video-v2-2/images/logo/php/logo-php-flat-retina.png" width="250px" height="150px" alt="Angular">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+			</svg> #}
+			<h2>Heading</h2>
+			<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+		<!-- /.col-lg-4 -->
+		<div class="col-lg-4">
+        <img
+			src="data:image/png;base64,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" width="250px" height="150px" alt="">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+			</svg> #}
+			<h2>Heading</h2>
+			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+
+        <!--daouda-->
+        <div class="col-lg-4">
+        <img
+			src="data:image/png;base64,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" width="250px" height="150px" alt="">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+			</svg> #}
+			<h2>Heading</h2>
+			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+        <div class="col-lg-4">
+        <img
+			src="data:image/png;base64,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" width="250px" height="150px" alt="">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+			</svg> #}
+			<h2>Heading</h2>
+			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+        <div class="col-lg-4">
+        <img
+			src="data:image/png;base64,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" width="250px" height="150px" alt="">
+			{# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+			</svg> #}
+			<h2>Heading</h2>
+			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<p>
+				<a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+			</p>
+		</div>
+		<!-- /.col-lg-4 -->
+	</div>
+	<!-- /.row -->
 
 
-        <!-- START THE FEATURETTES -->
+	<!-- START THE FEATURETTES -->
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">First featurette heading.
+				<span class="text-muted">It’ll blow your mind.</span>
+			</h2>
+			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5">
+			<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+			</svg>
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading">Oh yeah, it’s that good.
+				<span class="text-muted">See for yourself.</span>
+			</h2>
+			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5 order-md-1">
+			<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+			</svg>
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-            </div>
-        </div>
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">And lastly, this one.
+				<span class="text-muted">Checkmate.</span>
+			</h2>
+			<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5">
+			<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+				<title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+			</svg>
+		</div>
+	</div>
 
-        <hr class="featurette-divider">
+	<hr
+	class="featurette-divider">
 
-        <!-- /END THE FEATURETTES -->
+<!-- /END THE FEATURETTES -->
 {% endblock %}
