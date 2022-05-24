@@ -1,5 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block carousel %}{% endblock %}
+{% block contact %}
+<div class="container bg-light border">
+{% for item in post %}
+
+<div class="div">
+<h1> {{item.Fullname}} </h1>
+<p> {{item.email}} </p>
+<hr>
+<p> {{item.message}} </p>
+</div>    
+{% endfor %}
+</div>
+
+{% endblock %}
 {% block content %}
 	<!-- Three columns of text below the carousel -->
 	<div class="row">
