@@ -57,7 +57,7 @@
 							</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="{{path('home')}}">Contacts</a>
+							<a class="nav-link" href="{{path('app_contact')}}">Contacts</a>
 						</li>
 
 
@@ -78,6 +78,7 @@
 
 		<main role="main">
 		<h1 class= "bg-info text-white container text-center shadow  p-3 my-5 ">Bienvenue dans mon site </h1>
+		{% block messagecontact %}{% endblock %}
 		{% if block ('carousel') is defined %}
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">

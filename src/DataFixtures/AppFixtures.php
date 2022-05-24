@@ -18,12 +18,13 @@ class AppFixtures extends Fixture
         // $product = new Product();
         // $manager->persist($product);
         $faker = Factory::create('fr_FR');
-
-        for ($i = 0; $i < 10; $i++) {
+        $daouda= "Hello les Devs";
+        for ($i = 0; $i < 5; $i++) {
             $post = new Contact();
-            $post->setFullname($faker->sentence($nbWords = 2, $variableNbWords = true))
-                ->setEmail($faker->sentence($nbWords = 10, $variableNbWords = true))
-                ->setMessage($faker->name());
+            $post->setFullname($faker->name())
+                ->setEmail($faker->email())
+                ->setMessage($faker->sentence($nbWords = 2, $variableNbWords = true))
+                ->setSubject($faker->sentence($nbWords = 1, $variableNbWords = true));
                
 
             $manager->persist($post);

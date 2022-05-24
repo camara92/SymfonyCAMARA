@@ -25,6 +25,9 @@ class Contact
     #[ORM\Column(type: 'string', length: 100, nullable: true)]
     private $Subject;
 
+    #[ORM\Column(type: 'string', length: 100)]
+    private $submit;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,18 @@ class Contact
     public function setSubject(?string $Subject): self
     {
         $this->Subject = $Subject;
+
+        return $this;
+    }
+
+    public function getSubmit(): ?string
+    {
+        return $this->submit;
+    }
+
+    public function setSubmit(string $submit): self
+    {
+        $this->submit = $submit;
 
         return $this;
     }
