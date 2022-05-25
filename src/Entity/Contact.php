@@ -14,19 +14,19 @@ class Contact
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $Fullname;
+    public $Fullname;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $email;
+    public $email;
 
     #[ORM\Column(type: 'text')]
-    private $message;
+    public $message;
 
     #[ORM\Column(type: 'string', length: 100, nullable: true)]
-    private $Subject;
+    public $Subject;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $submit;
+    public $submit;
 
     public function getId(): ?int
     {

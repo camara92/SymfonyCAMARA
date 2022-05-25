@@ -23,9 +23,9 @@ final class Version20220524231652 extends AbstractMigration
         $this->addSql('ALTER TABLE contact ADD submit VARCHAR(100) NOT NULL');
     }
 
-    public function down(Schema $schema): void
-    {
-        // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE contact DROP submit');
-    }
+    // public function down(Schema $schema): void
+    // {
+    //     // this down() migration is auto-generated, please modify it to your needs
+    //     $this->addSql('ALTER TABLE contact DROP submit');
+    // }
 }

@@ -3,11 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Contact;
-use Doctrine\DBAL\Types\TextType;
+// use Doctrine\DBAL\Types\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Length;
 
@@ -33,19 +35,24 @@ class ContactType extends AbstractType
                 'min'=>2, 
                 'max'=>90
             ]),
-                'attr'=>['placeholder'=>'Merci de saisir votre email']
+                'attr'=>['placeholder'=>'Votre email']
             ])
             ->add('message', TextareaType::class, 
             [
                 'label'=>'Votre message',
-                'attr'=>['placeholder'=>'Merci de saisir votre message']
+                'attr'=>['placeholder'=>'Votre message']
             ]
             )
             ->add('Subject', TextareaType::class,
             [
                 'label'=>'Sujet',
-                'attr'=>['placeholder'=>'Pourriez-vous écrire le sujet de ce message ']
+                'attr'=>['placeholder'=>'Sujet ']
             ])
+
+            ->add('submit', SubmitType::class,
+            [
+                'label'=>"S'inscrire",
+            ] )
         ;
     }
 
